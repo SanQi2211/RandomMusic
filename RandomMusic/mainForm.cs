@@ -12,6 +12,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Un4seen.Bass;
 
 namespace RandomMusic
 {
@@ -20,7 +21,11 @@ namespace RandomMusic
         public mainForm()
         {
             InitializeComponent();
+            BassNet.Registration("2323326932@qq.com", "994cb1f810");
+            Bass.BASS_Init(-1, 44100, BASSInit.BASS_DEVICE_CPSPEAKERS, IntPtr.Zero);
         }
+        int stream;
+
         List<Models.MusicList> musicList = new List<Models.MusicList>();
         private void mainForm_Load(object sender, EventArgs e)
         {
@@ -68,8 +73,45 @@ namespace RandomMusic
                 pictureBox1.Image = Image.FromStream(ms);
             }
             var musicPlayUrl = musicSongModel.data[0].url;
-          //var   stream = Bass.BASS_StreamCreateURL(url, 0, BASSFlag.BASS_SAMPLE_FLOAT, null, IntPrt.Zero);
+
+
+
+            stream = Bass.BASS_StreamCreateURL(musicPlayUrl, 0, BASSFlag.BASS_SAMPLE_FLOAT, null, IntPtr.Zero);
+
+            Bass.BASS_ChannelPlay(stream, false);
+            MessageBox.Show(GetLength.ToString());
+            MessageBox.Show(Position.ToString());
+
+            var aaa = value();
         }
 
+        //获取当前音量 ref value
+        public float value()
+        {
+            //获取当前音量 ref value
+            float value = 0;
+            Bass.BASS_ChannelGetAttribute(stream, BASSAttribute.BASS_ATTRIB_VOL, ref value);
+            return value;
+        }
+
+        //长度
+        public TimeSpan GetLength
+        {
+            get
+            {
+                double seconds = Bass.BASS_ChannelBytes2Seconds(stream, Bass.BASS_ChannelGetLength(stream));
+                return TimeSpan.FromSeconds(seconds);
+            }
+        }
+        //当前播放位置
+        public TimeSpan Position
+        {
+            get
+            {
+                double seconds = Bass.BASS_ChannelBytes2Seconds(stream, Bass.BASS_ChannelGetPosition(stream));
+                return TimeSpan.FromSeconds(seconds);
+            }
+            set => Bass.BASS_ChannelSetPosition(stream, value.TotalSeconds);
+        }
     }
 }
