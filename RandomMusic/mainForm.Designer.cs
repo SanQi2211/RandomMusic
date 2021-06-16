@@ -78,6 +78,7 @@ namespace RandomMusic
             this.btnStop.Size = new System.Drawing.Size(46, 35);
             this.btnStop.Symbol = 61517;
             this.btnStop.TabIndex = 2;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // btnPlay
             // 
