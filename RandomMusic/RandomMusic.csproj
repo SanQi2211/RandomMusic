@@ -51,6 +51,9 @@
     <Reference Include="Bass.Net">
       <HintPath>..\..\v4.5\Bass.Net.dll</HintPath>
     </Reference>
+    <Reference Include="CSkin">
+      <HintPath>..\..\CSkin 4.0\CSkin.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlAgilityPack, Version=1.11.34.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <HintPath>..\packages\HtmlAgilityPack.1.11.34\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
@@ -102,6 +105,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -128,6 +132,123 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back_move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closemore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark - 副本.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download_move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\localMusic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\localMusic_move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause_move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play_move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Searchbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound_move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Track.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Track1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Track2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Track3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Track11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Track12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\txtbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UnKnown.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webMusic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webMusic_move.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
