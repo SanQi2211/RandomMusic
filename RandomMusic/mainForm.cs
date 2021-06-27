@@ -258,7 +258,7 @@ namespace RandomMusic
                 SoundTrack.Value = 0;
                 Volume = SoundTrack.Value;
                 sound.Symbol = 57447;
-            }
+            } 
             else
             {
                 SoundTrack.Value = vol;
